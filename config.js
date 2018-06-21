@@ -1,4 +1,5 @@
 module.exports = {
-    'secret': '',
-    'database': 'mongodb://localhost:27017/imobidb'
+    'username': '',
+    'password': '',
+    'database': 'mongodb+srv://pineladsn:imobiapiadmin01@cluster0-7dh0m.mongodb.net/imobidb'
 };
