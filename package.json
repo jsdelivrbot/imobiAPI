@@ -11,8 +11,12 @@
     "test": "node test.js"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "ejs": "^2.5.6",
-    "express": "^4.15.2"
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.1.6",
+    "morgan": "^1.9.0"
   },
   "devDependencies": {
     "request": "^2.81.0",
