@@ -1,0 +1,95 @@
+{
+	"variables": [],
+	"info": {
+		"name": "imobiAPI",
+		"_postman_id": "1e61e287-d54f-94a9-a503-b6b6a60e58a9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api",
+			"request": {
+				"url": "http://localhost:8080/api",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/users",
+			"request": {
+				"url": "http://localhost:8080/api/users",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/users",
+			"request": {
+				"url": "http://localhost:8080/api/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"name\": \"jack\", \n    \"password\": \"abc123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+			"request": {
+				"url": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+			"request": {
+				"url": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"name\": \"jack-edit\", \n    \"password\": \"abc123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+			"request": {
+				"url": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
