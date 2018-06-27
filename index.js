@@ -41,6 +41,8 @@ var apiRoutes = express.Router();
 apiRoutes.use(function(req, res, next) {
   // do logging
   console.log('Something is happening.');
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
   next(); // make sure we go to the next routes and don't stop here
 });
 // TODO: route to authenticate a user (POST http://localhost:8080/api/authenticate)
@@ -50,6 +52,8 @@ apiRoutes.use(function(req, res, next) {
 // route to show a random message (GET http://localhost:8080/api/)
 apiRoutes.get('/', function(req, res) {
   res.json({ message: 'Welcome to the coolest API on earth!' });
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
 });
 
 apiRoutes.route('/users')
