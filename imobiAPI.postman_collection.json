@@ -8,85 +8,152 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/api",
+			"name": "http://localhost:8080/",
 			"request": {
-				"url": "http://localhost:8080/api",
+				"url": "http://localhost:8080/",
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFja3p6eiIsImlhdCI6MTUzMTMzOTAyNCwiZXhwIjoxNTMxMzQwNDY0fQ.GVOJ6CP0WNZdMOt9eiqgGIsveu_Wvdp5JTzVwDZFat0",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": ""
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/users",
+			"name": "http://localhost:8080/users",
 			"request": {
-				"url": "http://localhost:8080/api/users",
+				"url": "http://localhost:8080/users",
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFja3p6eiIsImlhdCI6MTUzMTMzOTAyNCwiZXhwIjoxNTMxMzQwNDY0fQ.GVOJ6CP0WNZdMOt9eiqgGIsveu_Wvdp5JTzVwDZFat0",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": ""
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/users",
+			"name": "http://localhost:8080/users",
 			"request": {
-				"url": "http://localhost:8080/api/users",
+				"url": "http://localhost:8080/users",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFja3p6eiIsImlhdCI6MTUzMTMzOTAyNCwiZXhwIjoxNTMxMzQwNDY0fQ.GVOJ6CP0WNZdMOt9eiqgGIsveu_Wvdp5JTzVwDZFat0",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \n    \"name\": \"jack\", \n    \"password\": \"abc123\"\n}"
+					"raw": "{ \n    \"name\": \"new user\", \n    \"password\": \"123456\"\n}"
 				},
 				"description": ""
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+			"name": "http://localhost:8080/users/5b2bb89c807c982b94a7752c",
 			"request": {
-				"url": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+				"url": "http://localhost:8080/users/5b2be965f1d9596a440cb99a",
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFja3p6eiIsImlhdCI6MTUzMTMzOTAyNCwiZXhwIjoxNTMxMzQwNDY0fQ.GVOJ6CP0WNZdMOt9eiqgGIsveu_Wvdp5JTzVwDZFat0",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": ""
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+			"name": "http://localhost:8080/users/5b2bb89c807c982b94a7752c",
 			"request": {
-				"url": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+				"url": "http://localhost:8080/users/5b3b89e1d9617d2f351f640c",
 				"method": "PUT",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
 						"description": ""
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFja3p6eiIsImlhdCI6MTUzMTMzOTQxMSwiZXhwIjoxNTMxMzQwODUxfQ.poMqY2FNpyTXaM4z4rtNWIoIMoLV9O9ikdcmlZuS3Zw",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \n    \"name\": \"jack-edit\", \n    \"password\": \"abc123\"\n}"
+					"raw": "{\n\t\"name\": \"a\",\n\t\"password\": \"a\"\n}"
 				},
 				"description": ""
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+			"name": "http://localhost:8080/users/5b2bb89c807c982b94a7752c",
 			"request": {
-				"url": "http://localhost:8080/api/users/5b2bb89c807c982b94a7752c",
+				"url": "http://localhost:8080/users/5b3b89e1d9617d2f351f640c",
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiamFja3p6eiIsImlhdCI6MTUzMTMzOTQxMSwiZXhwIjoxNTMxMzQwODUxfQ.poMqY2FNpyTXaM4z4rtNWIoIMoLV9O9ikdcmlZuS3Zw",
+						"description": ""
+					}
+				],
 				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/authenticate",
+			"request": {
+				"url": "http://localhost:8080/authenticate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "jackzzz",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abc123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
 				"description": ""
 			},
 			"response": []
