@@ -7,7 +7,6 @@ var bodyParser  = require('body-parser');
 var morgan      = require('morgan');
 var mongoose    = require('mongoose');
 
-var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
 //var User = require('./app/models/user/user');
 
@@ -38,46 +37,7 @@ app.use(morgan('dev'));
 //var apiRoutes = express.Router(); 
 //app.use('/api', apiRoutes);
 
-// middleware to use for all requests
-app.use(function(req, res, next) {
-    // do logging
-    console.log('Something is happening.');
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    //next(); // make sure we go to the next routes and don't stop here
-
-    debugger;
-    if (req.originalUrl == '/authenticate') {
-        next();
-        return;
-    }
-
-    // check header or url parameters or post parameters for token
-    var token = req.body.token || req.query.token || req.headers['x-access-token'];
-  
-    // decode token
-    if (token) {
-        // verifies secret and checks exp
-        jwt.verify(token, 'someSecretHere'/*app.get('secret')*/, function(err, decoded) {      
-            if (err) {
-                return res.json({ success: false, message: 'Failed to authenticate token.' });    
-            } else {
-                // if everything is good, save to request for use in other routes
-                req.decoded = decoded;    
-                next();
-            }
-        });
-    } else {
- 
-     // if there is no token
-     // return an error
-     return res.status(403).send({ 
-         success: false, 
-         message: 'No token provided.' 
-     });
- 
-    } 
-});
+require('./app/routes/verify-token.routes')(app);
 
 app.get('/', function(req, res) {
     res.json({ message: 'Welcome to the coolest API on earth!' });
